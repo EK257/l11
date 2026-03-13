@@ -9,12 +9,11 @@ namespace l11
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int birthYear = (int)numericUpDown1.Value;
-            int currentYear = (int)numericUpDown2.Value;
+            int age = CalculateAge(1990, 2024);
+            label1.Text = "Возраст: " + age + " лет";
 
-            int age = CalculateAge(birthYear, currentYear);
-
-            label3.Text = "Возраст: " + age + " лет";
+            age = CalculateAge(2005, 2024);
+            label2.Text = "Возраст: " + age + " лет";
         }
 
         private int CalculateAge(int birthYear, int currentYear)
